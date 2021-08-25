@@ -1,7 +1,7 @@
 public interface Monster {
-    public int getHowBig();
-    public String getName();
-    public boolean isBigger(Monster other);
-    public boolean isSmaller(Monster other);
-    public boolean namesTheSame(Monster other);
+    int getHowBig();
+    String getName();
+    boolean isBigger(Monster other);
+    boolean isSmaller(Monster other);
+    boolean namesTheSame(Monster other);
 }

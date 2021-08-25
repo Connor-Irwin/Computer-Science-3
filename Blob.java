@@ -1,10 +1,10 @@
-import static java.lang.System.*;
+import org.jetbrains.annotations.NotNull;
 
 public class Blob implements Monster {
     // Add instance variables
-    private String name;
-    private int size;
-    private String color;
+    private final String name;
+    private final int size;
+    private final String color;
 
     // Add a constructor
     public Blob(String n, int s, String c) {
@@ -26,19 +26,16 @@ public class Blob implements Monster {
         return color;
     }
 
-    public boolean isBigger(Monster other) {
-        if (other.getHowBig() > size) return true;
-        return false;
+    public boolean isBigger(@NotNull Monster other) {
+        return other.getHowBig() > size;
     }
 
-    public boolean isSmaller(Monster other) {
-        if (other.getHowBig() < size) return true;
-        return false;
+    public boolean isSmaller(@NotNull Monster other) {
+        return other.getHowBig() < size;
     }
 
-    public boolean namesTheSame(Monster other) {
-        if (other.getName().equals(name)) return true;
-        return false;
+    public boolean namesTheSame(@NotNull Monster other) {
+        return other.getName().equals(name);
     }
 
     // Add a toString method

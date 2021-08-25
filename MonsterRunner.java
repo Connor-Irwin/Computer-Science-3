@@ -19,7 +19,7 @@ public class MonsterRunner {
         //out.println("n " + name1 + " s " + size1);
 
         // Instantiate a Monster
-        Skeleton skel = new Skeleton(name1, size1);
+        Monster skel = new Skeleton(name1, size1);
 
         // Ask for name and size
         out.println("\n--- Monster 2 ---");
@@ -35,7 +35,7 @@ public class MonsterRunner {
         String color2 = keyboard.nextLine();
 
         // Instantiate another Monster
-        Blob bob = new Blob(name2, size2, color2);
+        Monster bob = new Blob(name2, size2, color2);
 
         out.println();
 
