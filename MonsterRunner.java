@@ -16,8 +16,6 @@ public class MonsterRunner {
         int size1 = keyboard.nextInt();
         keyboard.nextLine();
 
-        //out.println("n " + name1 + " s " + size1);
-
         // Instantiate a Monster
         Monster skel = new Skeleton(name1, size1);
 
@@ -40,14 +38,14 @@ public class MonsterRunner {
         out.println();
 
         // Compare the two Monsters
-        if (skel.getHowBig() > bob.getHowBig())
+        if (skel.isBigger(bob))
             out.println("Monster one is bigger than Monster two.");
-        else if (skel.getHowBig() < bob.getHowBig())
+        else if (skel.isSmaller(bob))
             out.println("Monster one is smaller than Monster two.");
         else
             out.println("Monster one is the same size as Monster two.");
 
-        if (skel.getName().equals(bob.getName()))
+        if (skel.namesTheSame(bob))
             out.println("Monster one has the same name as Monster two.");
         else
             out.println("Monster one does not have the same name as Monster two.");
