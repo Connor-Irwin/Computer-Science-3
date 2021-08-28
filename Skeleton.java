@@ -21,11 +21,11 @@ public class Skeleton implements Monster {
     }
 
     public boolean isBigger(@NotNull Monster other) {
-        return other.getHowBig() > size;
+        return other.getHowBig() < size;
     }
 
     public boolean isSmaller(@NotNull Monster other) {
-        return other.getHowBig() < size;
+        return other.getHowBig() > size;
     }
 
     public boolean namesTheSame(@NotNull Monster other) {
@@ -35,6 +35,6 @@ public class Skeleton implements Monster {
     // Add a toString method
     @Override
     public String toString() {
-        return "Name: " + name + "\nSize: " + size;
+        return name + " " + size;
     }
 }
