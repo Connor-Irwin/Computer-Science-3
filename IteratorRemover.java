@@ -19,7 +19,8 @@ public class IteratorRemover {
      * toRemove should be an empty String
      */
     public IteratorRemover() {
-
+        list = new ArrayList<>();
+        toRemove = "";
     }
 
     /**
@@ -27,14 +28,21 @@ public class IteratorRemover {
      * word to be removed.
      */
     public void setTest(String line, String rem) {
-
+        list = new ArrayList<>(Arrays.asList(line.split(" ")));
+        toRemove = rem;
     }
 
     /**
      * Removes all occurrences of toRemove from list
      */
     public void remove() {
+        Iterator<String> it = list.iterator();
 
+        while (it.hasNext()) {
+            if (toRemove.equals(it.next())) {
+                it.remove();
+            }
+        }
     }
 
     /**
@@ -42,6 +50,6 @@ public class IteratorRemover {
      */
     @Override
     public String toString() {
-        return "";
+        return list.toString();
     }
 }
