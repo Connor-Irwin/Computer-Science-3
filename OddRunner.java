@@ -10,7 +10,8 @@ public class OddRunner {
             Scanner in = new Scanner(new File("oddeven.dat"));
 
             while (in.hasNext()) {
-                System.out.println(in.next());
+                OddEvenSets oes = new OddEvenSets(in.nextLine());
+                System.out.println(oes + "\n");
             }
         } catch (IOException e) {
             System.out.println("Could not open file.");
