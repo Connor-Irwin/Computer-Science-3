@@ -45,61 +45,37 @@ public class MathSet {
     }
 
     public Set<Integer> intersection() {
-        Set<Integer> i = new TreeSet<>();
 
-        for (int a : one) {
-            if (two.contains(a)) {
-                i.add(a);
-            }
-        }
+        Set<Integer> i = new TreeSet<>(one);
+        i.retainAll(two);
 
         return i;
     }
 
     public Set<Integer> differenceAMinusB() {
-        Set<Integer> amb = new TreeSet<>();
-
-        for (int a : one) {
-            if (!two.contains(a)) {
-                amb.add(a);
-            }
-        }
+        Set<Integer> amb = new TreeSet<>(one);
+        amb.removeAll(two);
 
         return amb;
     }
 
     public Set<Integer> differenceBMinusA() {
-        Set<Integer> bma = new TreeSet<>();
-
-        for (int b : two) {
-            if (!one.contains(b)) {
-                bma.add(b);
-            }
-        }
+        Set<Integer> bma = new TreeSet<>(two);
+        bma.removeAll(one);
 
         return bma;
     }
 
     public Set<Integer> symmetricDifference() {
-        Set<Integer> sd = new TreeSet<>();
+        Set<Integer> sd = new TreeSet<>(differenceAMinusB());
 
-        for (int a : one) {
-            if (!two.contains(a)) {
-                sd.add(a);
-            }
-        }
-
-        for (int b : two) {
-            if (!one.contains(b)) {
-                sd.add(b);
-            }
-        }
+        sd.addAll(differenceBMinusA());
 
         return sd;
     }
 
     @Override
     public String toString() {
-        return "Set one " + one + "\n" + "Set two " + two + "\n";
+        return "Set one - " + one + "\n" + "Set two - " + two + "\n";
     }
 }
