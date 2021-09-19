@@ -47,6 +47,7 @@ public class MathSet {
     public Set<Integer> intersection() {
 
         Set<Integer> i = new TreeSet<>(one);
+
         i.retainAll(two);
 
         return i;
@@ -54,6 +55,7 @@ public class MathSet {
 
     public Set<Integer> differenceAMinusB() {
         Set<Integer> amb = new TreeSet<>(one);
+
         amb.removeAll(two);
 
         return amb;
@@ -61,6 +63,7 @@ public class MathSet {
 
     public Set<Integer> differenceBMinusA() {
         Set<Integer> bma = new TreeSet<>(two);
+
         bma.removeAll(one);
 
         return bma;
