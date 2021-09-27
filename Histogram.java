@@ -43,6 +43,6 @@ public class Histogram {
             output += "\n";
         }
 
-        return output + "\n\n";
+        return output;
     }
 }
