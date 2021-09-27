@@ -13,7 +13,7 @@ public class HistoRunner {
             while (input.hasNext()) {
                 hist.setSentence(input.nextLine());
 
-                out.println(hist);
+                out.print(hist);
             }
         } catch (FileNotFoundException e) {
             out.println("Error opening file:\n" + e);

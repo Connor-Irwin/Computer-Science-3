@@ -36,13 +36,13 @@ public class Histogram {
         Set<String> keySet = histogram.keySet();
 
         for (String key : keySet) {
-            output += key + "\t\t";
+            output += key + "\t";
             for (int i = 0; i < histogram.get(key); i++) {
                 output += "*";
             }
             output += "\n";
         }
 
-        return output + "\n\n";
+        return output;
     }
 }
