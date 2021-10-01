@@ -21,7 +21,7 @@ public class Relatives {
     }
 
     public String getRelatives(String person) {
-        return map.get(person).toString().replaceAll("[,\\[\\]]", "");
+        return map.get(person).toString();
     }
 
     @Override
