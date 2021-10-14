@@ -52,6 +52,6 @@ public class Postfix {
 
     @Override
     public String toString() {
-        return expression + " = " + stack.pop();
+        return expression + " = " + stack.peek();
     }
 }

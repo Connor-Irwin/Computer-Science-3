@@ -9,6 +9,7 @@ public class Grader {
         Postfix test = new Postfix();
         if (args[0].equals("1")) {
             test.setExpression("2 7 + 1 2 + +");
+            test.solve();
             out.println(test);
         } else if (args[0].equals("2")) {
             test.setExpression("1 2 3 4 + + +");
@@ -23,7 +24,7 @@ public class Grader {
             test.solve();
             out.println(test);
         } else if (args[0].equals("5")) {
-            test.setExpression("9 3 / 2 * 7 9 * + 4 –");
+            test.setExpression("9 3 / 2 * 7 9 * + 4 -");
             test.solve();
             out.println(test);
         } else if (args[0].equals("6")) {
