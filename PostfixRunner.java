@@ -18,6 +18,10 @@ public class PostfixRunner {
         test.solve();
         out.println(test);
 
+        test.setExpression("9 3 / 2 * 7 9 * + 4 -");
+        test.solve();
+        out.println(test);
+
         test.setExpression("5 5 + 2 * 4 / 9 +");
         test.solve();
         out.println(test);
