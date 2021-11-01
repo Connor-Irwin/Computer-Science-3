@@ -60,7 +60,7 @@ public class MyStack {
         StringBuilder output = new StringBuilder();
         for (int i = 0; i < stack.length; i++) {
             if (stack[i] != null) {
-                if (i == stack.length) {
+                if (i == stack.length - 2) {
                     output.insert(0, stack[i] + "\t<----- TOP" + "\n");
                 } else {
                     output.insert(0, stack[i] + "\n");
