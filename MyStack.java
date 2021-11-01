@@ -58,13 +58,11 @@ public class MyStack {
     @Override
     public String toString() {
         StringBuilder output = new StringBuilder();
-        for (int i = 0; i < stack.length; i++) {
-            if (stack[i] != null) {
-                if (i == stack.length - 2) {
-                    output.insert(0, stack[i] + "\t<----- TOP" + "\n");
-                } else {
-                    output.insert(0, stack[i] + "\n");
-                }
+        for (int i = size - 1; i >= 0; i--) {
+            if (i == size - 1) {
+                output.append(stack[i] + "\t<----- TOP" + "\n");
+            } else {
+                output.append(stack[i] + "\n");
             }
         }
         return output.toString();
