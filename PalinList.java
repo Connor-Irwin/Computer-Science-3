@@ -19,7 +19,7 @@ public class PalinList {
         stack = new Stack<>();
 
         for (String word : str.split(" ")) {
-            queue.add(word);
+            queue.offer(word);
             stack.push(word);
         }
     }
