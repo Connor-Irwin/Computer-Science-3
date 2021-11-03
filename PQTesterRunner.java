@@ -13,6 +13,6 @@ public class PQTesterRunner {
         test.setPQ(list);
         System.out.println(test);
         System.out.println(test.getMin());
-        System.out.println(test.getNaturalOrder() + "\n\n");
+        System.out.println(test.getNaturalOrder() + "\n");
     }
 }
